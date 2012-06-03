@@ -1,0 +1,78 @@
+@import "base-vars";
+@import "mixins";
+
+.jxButtonContainer {
+    display: inline-block;
+    position: relative;
+    
+    a.jxButton {
+        .linear-gradient(#ffffff, #dbdbdb);
+        border: 1px solid #fff;
+        .box-shadow(0px, 0px, 4px, 0, 0, 0, 0.4);
+        .rounded-corners(18px);
+        padding: 5px 15px;
+        text-decoration: none;
+        text-shadow: #fff 0 1px 0;
+        display: block;
+        float: left;
+        color: @text-color;
+        line-height: @base-line-height;
+        font-size: @base-font-size;
+        font-weight: bold;
+        margin: 3px;
+        &:hover {
+            .linear-gradient(#ffffff,#eeeeee);
+            color: #000;
+            display: block;
+            outline: none;
+        }
+        &:active, &.jxButtonActive {
+            .linear-gradient(#dbdbdb, #ffffff);
+            text-shadow: 0px -1px 0 rgba(255, 255, 255, 0.5);
+            margin-top: 1px;
+            outline: none;
+        }
+        &:focus {
+            outline: none;
+        }
+        
+        span {
+            display: inline;
+        }
+        
+        &.jxIcon, &.jxIconLeft {
+            padding-left: 11px;
+            
+            span {
+                padding-left: 24px;
+                background: url(../a_pixel.png) no-repeat center left;
+            }
+        }
+        
+        &.jxIconRight {
+            padding-right: 11px;
+            
+            span {
+                padding-right: 24px;
+                background: url(../a_pixel.png) no-repeat center right;
+            }
+        }
+        
+        
+    }
+    
+    &.jxDisabled a.jxButton,
+    &.jxDisabled a.jxButton:hover,
+    &.jxDisabled a.jxButton:focus,
+    &.jxDisabled a.jxButton:active,
+    &.jxDisabled a.jxButton.jxButtonActive {
+        color: #c0c0c0;
+        text-shadow: #CCC 0 1px 0;
+        .linear-gradient(#ffffff, #dbdbdb);   
+    }
+    
+}
+
+.IE a.jxButton {
+    border: 1px solid #979797;
+}

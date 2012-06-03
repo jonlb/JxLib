@@ -1,0 +1,25 @@
+/* Jx Flyout Styles */
+
+.jxFlyout .jxChrome {
+  background-image: url(images/flyout_chrome.png);
+  padding: 5px 5px 7px 6px;
+}
+
+.jxFlyout {
+  /* Base setup */
+  position: absolute;
+  display: block;
+  z-index: 100;
+
+  margin: 0px;
+  padding: 0px;
+}
+
+.jxFlyoutContent {
+  position: relative;
+  display: block;
+  overflow: auto;
+  margin: 6px 6px 8px 7px;
+  background-color: #fff;
+  border: 1px solid #999;
+}

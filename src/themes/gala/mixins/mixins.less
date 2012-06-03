@@ -1,0 +1,18 @@
+
+.rounded-corners (@radius: 5px) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  border-radius: @radius;
+}
+
+.linear-gradient (@start, @end) {
+    background-image: -moz-linear-gradient(top, @start, @end);
+    background-image: -webkit-gradient(linear,left top,left bottom, color-stop(0, @start),color-stop(1, @end));
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='@{start}', EndColorStr='@{end}')";
+}
+
+.box-shadow (@x: 0, @y: 0, @blur: 1px, @r: 0, @g: 0, @b: 0, @opacity: 0.4) {
+    -moz-box-shadow: @x @y @blur rgba(@r, @g, @b, @opacity);
+    -webkit-box-shadow: @x @y @blur rgba(@r, @g, @b, @opacity);
+    box-shadow: @x @y @blur rgba(@r, @g, @b, @opacity);
+}
